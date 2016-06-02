@@ -1,0 +1,18 @@
+<html>
+<head><title>DeployJava test</title></head>
+<body>
+<script src="https://www.java.com/js/deployJava.js"></script>
+<script>
+    document.write("Has Java version 1.6: " + deployJava.versionCheck("1.6") + "<br\>");
+    document.write("Has Java version 1.7: " + deployJava.versionCheck("1.7") + "<br\>");
+    document.write("Has Java version 1.8: " + deployJava.versionCheck("1.8") + "<br\>");
+
+    document.write("Installed JREs: " + deployJava.getJREs() + "<br\>");
+
+    document.write("Firefox version: " + deployJava.firefoxJavaVersion + "<br\>");
+    document.write("ActiveX version: " + deployJava.testUsingActiveX("1.8.0") + "<br\>");
+    document.write("MIME type version: " + deployJava.testUsingMimeTypes("1.8")  + "<br\>");
+    document.write("Plugin Array version: " + deployJava.testUsingPluginsArray("1.8.0"));
+</script>
+</body>
+</html>

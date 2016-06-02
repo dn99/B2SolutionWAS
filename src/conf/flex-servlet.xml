@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:flex="http://www.springframework.org/schema/flex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/flex
+	http://www.springframework.org/schema/flex/spring-flex-1.5.xsd">
+ 	
+ 	<!--
+	<flex:message-destination id="event-bus" 
+		message-broker="messageServiceBroker"
+		channels="my-polling-amf, my-secure-amf" 
+		allow-subtopics="true" 
+		cluster-message-routing="broadcast" 
+		message-time-to-live="1" 
+		send-security-constraint="fooConstraint" 
+		subscribe-security-constraint="barConstraint" 
+		subscription-timeout-minutes="1" 
+		subtopic-separator="/" 
+		throttle-inbound-max-frequency="500"
+		throttle-inbound-policy="ERROR" 
+		throttle-outbound-max-frequency="500" 
+		throttle-outbound-policy="IGNORE" />
+ 	-->
+	
+	<flex:message-broker>
+		<!--<flex:message-service default-channels="my-streaming-amf" />-->
+		<!--<flex:message-service default-channels="my-amf,my-streaming-amf,my-longpolling-amf,my-polling-amf" />-->
+		<flex:message-service default-channels="my-streaming-amf,my-longpolling-amf,my-polling-amf" />
+	</flex:message-broker>
+	
+	<flex:message-broker>
+		<flex:remoting-service default-channels="my-amf" />
+	</flex:message-broker>
+	
+	<flex:message-destination id="pushService" allow-subtopics="true" />
+	<flex:message-destination id="messageService" />
+	
+	<flex:message-destination id="pushServiceDoc" allow-subtopics="true" />
+	
+</beans>

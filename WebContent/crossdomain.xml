@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+   <site-control permitted-cross-domain-policies="all" />
+   <allow-access-from domain="*" />
+   <allow-http-request-headers-from domain="*" headers="*" />
+</cross-domain-policy>
+
+<!--
+   <cross-domain-policy> 
+   <site-control permitted-cross-domain-policies="master-only"/> 
+   <allow-access-from domain="*"/> 紐⑤뱺 ?꾨찓???덉슜
+   <allow-access-from domain="*.blueb.net"/> blueb.net ?쒕툕?꾨찓?멸퉴吏留??덉슜
+   <allow-access-from domain="blueb.net" /> blueb.net 留??덉슜
+   <allow-access-from domain="000.000.000.000"/> ?꾩씠?쇰줈 ?ㅼ젙
+   <allow-http-request-headers-from domain="*" headers="SOAPAction"/> 
+   </cross-domain-policy>
+-->
